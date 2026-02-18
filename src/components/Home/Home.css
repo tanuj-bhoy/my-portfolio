@@ -1,0 +1,210 @@
+#home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.righthome {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.lefthome {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.righthome img {
+  width: 55%;
+  filter: drop-shadow(10px 10px 30px rgb(255, 225, 0));
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.homedetails {
+  font-size: 2vmax;
+}
+
+.line1 {
+  font-size: 0.8em;
+}
+
+.line2 {
+  font-size: 3em;
+  background: linear-gradient(to right, rgb(203, 70, 203), rgb(228, 234, 227));
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+}
+
+.line3 {
+  font-size: 1em;
+}
+
+.homedetails button {
+  padding: 10px 30px;
+  background-color: #262424;
+  color: white;
+  border: 2px solid rgb(225, 216, 216);
+  margin-top: 30px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.homedetails button:hover {
+  background-color: rgb(230, 211, 66);
+  color: black;
+  border-color: rgb(230, 211, 66);
+}
+
+.homedetails button {
+  padding: 10px 30px;
+  background-color: #262424;
+  color: white;
+  border: 2px solid rgb(225, 216, 216);
+  margin-top: 30px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.homedetails button:hover {
+  background-color: rgb(230, 211, 66);
+  color: black;
+  border-color: rgb(230, 211, 66);
+}
+
+.social-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+/* Button style */
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 25px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: yellow; 
+  box-shadow: 0 0 13px yellow;
+}
+
+/* Logo size */
+.social-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Hover effect */
+.social-btn:hover {
+  background-color: rgb(230, 211, 66);
+  border-color: rgb(230, 211, 66);
+  color: black;
+}
+
+@media (max-width: 750px) {
+  #home {
+    flex-direction: column-reverse;
+  }
+  .lefthome {
+    width: 100%;
+    height: 50vh;
+  }
+  .righthome {
+    width: 100%;
+    height: 50vh;
+    align-items: end;
+  }
+}
+
+/* Home.css mein yeh add karo last mein */
+
+/* iPad Mini (768px) */
+@media (max-width: 768px) and (min-width: 481px) {
+  #home {
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .lefthome, .righthome {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  
+  .homedetails {
+    font-size: 1.8vmax;
+    text-align: center;
+  }
+  
+  .line2 {
+    font-size: 2.5em;
+  }
+  
+  .righthome img {
+    width: 45%;
+    max-width: 300px;
+  }
+  
+  .social-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .social-btn {
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+}
+
+/* iPad Air & Pro (834px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .homedetails {
+    font-size: 1.6vmax;
+  }
+  
+  .line2 {
+    font-size: 2.8em;
+  }
+  
+  .righthome img {
+    width: 50%;
+  }
+  
+  .social-buttons {
+    gap: 10px;
+  }
+}
+
+/* Surface Pro (912px) */
+@media (max-width: 912px) and (min-width: 769px) {
+  .lefthome {
+    padding-left: 40px;
+  }
+  
+  .homedetails {
+    font-size: 1.7vmax;
+  }
+}

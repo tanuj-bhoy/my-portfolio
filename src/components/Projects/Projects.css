@@ -1,0 +1,288 @@
+#projects {
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 20px;
+  background: #0a0a0a;
+  color: #ffffff;
+  font-family: 'Inter', 'Arial', sans-serif;
+}
+
+.projects-heading {
+  font-size: 3.5rem;
+  margin-bottom: 80px;
+  text-align: center;
+  font-weight: 800;
+  background: linear-gradient(45deg, #ffffff, #34b7f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: relative;
+}
+
+.projects-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #34b7f1, #ffffff);
+  border-radius: 2px;
+}
+
+.project-card {
+  max-width: 1000px;
+  margin: 0 auto 70px;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(52, 183, 241, 0.1), transparent);
+  transition: left 0.7s ease;
+}
+
+.project-card:hover::before {
+  left: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(52, 183, 241, 0.3);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.project-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #34b7f1;
+  margin-bottom: 30px;
+  text-align: left;
+  position: relative;
+  display: inline-block;
+}
+
+.project-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #34b7f1, transparent);
+  border-radius: 2px;
+}
+
+.project-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+  text-align: left;
+  margin-bottom: 40px;
+  font-style: italic;
+  border-left: 4px solid #34b7f1;
+  padding-left: 25px;
+  background: rgba(52, 183, 241, 0.05);
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid rgba(52, 183, 241, 0.1);
+}
+
+.project-buttons {
+  display: flex;
+  gap: 25px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 15px 35px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn-live {
+  background: linear-gradient(135deg, #34b7f1, #1a9edb);
+  color: #0a0a0a;
+  font-weight: 700;
+}
+
+.btn-live:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(52, 183, 241, 0.4);
+}
+
+.btn-github {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.btn-github:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover .btn-icon {
+  transform: translateX(3px);
+}
+
+/* Different project themes */
+.project-card:nth-child(2) .project-content h2 {
+  color: #ff6b6b;
+}
+
+.project-card:nth-child(2) .project-content h2::after {
+  background: linear-gradient(90deg, #ff6b6b, transparent);
+}
+
+.project-card:nth-child(2) .project-description {
+  border-left-color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.05);
+  border: 1px solid rgba(255, 107, 107, 0.1);
+}
+
+.project-card:nth-child(2) .btn-live {
+  background: linear-gradient(135deg, #ff6b6b, #ff5252);
+}
+
+.project-card:nth-child(3) .project-content h2 {
+  color: #4ecdc4;
+}
+
+.project-card:nth-child(3) .project-content h2::after {
+  background: linear-gradient(90deg, #4ecdc4, transparent);
+}
+
+.project-card:nth-child(3) .project-description {
+  border-left-color: #4ecdc4;
+  background: rgba(78, 205, 196, 0.05);
+  border: 1px solid rgba(78, 205, 196, 0.1);
+}
+
+.project-card:nth-child(3) .btn-live {
+  background: linear-gradient(135deg, #4ecdc4, #2bb9b0);
+}
+/* Real Time ChatApp Custom Theme */
+.project-card.chat-theme .project-content h2 {
+  color: rgb(26, 26, 158);
+}
+
+.project-card.chat-theme .project-content h2::after {
+  background: linear-gradient(90deg, #22c55e, transparent);
+}
+
+.project-card.chat-theme .project-description {
+  border-left-color: #22c55e;
+  background: rgba(34, 197, 94, 0.05);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+}
+
+.project-card.chat-theme .btn-live {
+  background: linear-gradient(135deg, #16a34a, #1d4ed8, rgba(93, 102, 193, 0.9));
+}
+
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .project-card {
+    padding: 40px 30px;
+    margin-bottom: 50px;
+  }
+  
+  .project-content h2 {
+    font-size: 2.2rem;
+  }
+  
+  .project-description {
+    font-size: 1.1rem;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #projects {
+    padding: 80px 15px;
+  }
+  
+  .projects-heading {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+  }
+  
+  .project-card {
+    padding: 30px 25px;
+    margin-bottom: 40px;
+  }
+  
+  .project-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .project-description {
+    font-size: 1rem;
+    padding: 15px;
+  }
+  
+  .project-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 25px;
+  }
+}
