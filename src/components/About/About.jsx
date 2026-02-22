@@ -1,4 +1,4 @@
-import "./about.css";
+import "./About.css";
 import boot from "../../assets/boot.png";
 import html from "../../assets/html.png";
 import css from "../../assets/css.png";
